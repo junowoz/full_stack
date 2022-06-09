@@ -1,30 +1,25 @@
-//starting javascript training here
 /*
+ *Starting my javascript training here!
 * I see how the syntaxt is very similar to C programmig language
 */
 
   console.log("Hello World!");
   console.log("Hello " + "World!")
 
-/*Variables
-*   let is used when the variable can be changed
-    const is when the variable is constant and never changes
+/* 
+  Variables
+  let is used when the variable can be changed
+  const is when the variable is constant and never changes
 */
 
-/*Comparisions 
-2 > 1
-5 < 10
-5 <= 4
-8 >= 7
-7 === 7
-6 !== 1
-
-Logical Operators
-
-  AND = &&
-  OR = | |
-  NOT = !
-*/
+  let changeMe = true
+  changeMe = false
+  console.log(changeMe)
+  
+  const entree = 'Enchiladas'
+  console.log(entree)
+  entree = 'Tacos' //Outputs ERROR
+  
 
 //Null
   let something = null; //Represents a void
@@ -47,18 +42,38 @@ Logical Operators
   -= subtraction assignment
   *= multiplication assignment
   /= division assignment
-  */
+
+  Comparisions 
+  2 > 1
+  5 < 10
+  5 <= 4
+  8 >= 7
+  7 === 7
+  6 !== 1
+*/
 
   let number = 100;
- 
-// Both statements will add 10
   number = number + 10;
-  number += 10;
+  number += 10; // Both statements will add 10
  
   console.log(number); // Prints: 120
+  let x = 20;
+  x -= 5; // Can be written as x = x - 5
+  console.log(x); // Output: 15
+  
+  let y = 50;
+  y *= 2; // Can be written as y = y * 2
+  console.log(y); // Output: 100
+  
+  let z = 8;
+  z /= 2; // Can be written as z = z / 2
+  console.log(z); // Output: 4
 
 
-//Methods
+/*
+  Methods
+*/
+
   Math.random(); // Returns a number between 0 and 1
 
   console.log("Hello".lenght);
@@ -73,6 +88,7 @@ Logical Operators
   console.log(Math.ceil(43.8))
   console.log(Number.isInteger(2017))
   
+  
 /*
 * CONDITIONALS
 */
@@ -85,7 +101,6 @@ Logical Operators
   }
 
 //Else If
-
   const size = 10;
   
   if (size > 100) {
@@ -97,7 +112,7 @@ Logical Operators
   } else {
     console.log('Tiny');
   }
-// Print: Small
+// Prints: Small
 
 // More Examples using operators
 
@@ -110,8 +125,12 @@ Logical Operators
     console.log('not bed time yet');
   }
 
-/*Logical Operators OR and &
+/*Logical Operators OR and AND
 OR - if one value is true, returns true.
+
+  AND = &&
+  OR = | |
+  NOT = !
 
 Falsy values include false, 0, empty strings, null undefined, and NaN. All other values are truthy.
 */
@@ -136,8 +155,10 @@ Falsy values include false, 0, empty strings, null undefined, and NaN. All other
 
   console.log(`The ${writingUtensil} is mightier than the sword.`);
   
-//Ternary Operator
-/*In the example:
+
+/*
+Ternary Operator
+In the example:
 
 The condition, isNightTime, is provided before the ?.
 Two expressions follow the ? and are separated by a colon :.
@@ -147,8 +168,7 @@ If the condition evaluates to false, the second expression executes.
 
   let isNightTime = true;
   isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
-  
-//Basicamente el ? funciona como el if, y el : como el else. El primer console.log no termina con semicolon
+  //Basicamente el ? funciona como el if, y el : como el else. El primer console.log no termina con semicolon
 
 //Switch Statement
 
