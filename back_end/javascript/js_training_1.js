@@ -104,6 +104,35 @@ console.log(typeof unknown3); // Output: boolean
   let lostDollar = 50;
   lostDollar--
 
+/*Logical Operators OR and AND
+OR - if one value is true, returns true.
+
+  AND = &&
+  OR = | |
+  NOT = !
+
+Falsy values include false, 0, empty strings, null undefined, and NaN. All other values are truthy.
+*/
+
+  true || false;        // true
+  10 > 5 || 10 > 20;    // true
+  false || false;       // false
+  10 > 100 || 10 > 20;  // false
+
+//& -if one value is false, returns false
+  true && true;      // true
+  1 > 2 && 2 > 1;    // false
+  true && false;     // false
+  4 === 4 && 3 > 1;  // true
+
+//Truly and Falsy Assignment
+
+  let tool = 'marker';
+
+  // Use short circuit evaluation to assign  writingUtensil variable below:
+  let writingUtensil = tool || 'pen';
+
+  console.log(`The ${writingUtensil} is mightier than the sword.`);
 
 /*
 * CONDITIONALS
@@ -140,37 +169,6 @@ console.log(typeof unknown3); // Output: boolean
   }else{
     console.log('not bed time yet');
   }
-
-/*Logical Operators OR and AND
-OR - if one value is true, returns true.
-
-  AND = &&
-  OR = | |
-  NOT = !
-
-Falsy values include false, 0, empty strings, null undefined, and NaN. All other values are truthy.
-*/
-
-  true || false;        // true
-  10 > 5 || 10 > 20;    // true
-  false || false;       // false
-  10 > 100 || 10 > 20;  // false
-
-//& -if one value is false, returns false
-  true && true;      // true
-  1 > 2 && 2 > 1;    // false
-  true && false;     // false
-  4 === 4 && 3 > 1;  // true
-
-//Truly and Falsy Assignment
-
-  let tool = 'marker';
-
-  // Use short circuit evaluation to assign  writingUtensil variable below:
-  let writingUtensil = tool || 'pen';
-
-  console.log(`The ${writingUtensil} is mightier than the sword.`);
-  
 
 /*
 Ternary Operator
