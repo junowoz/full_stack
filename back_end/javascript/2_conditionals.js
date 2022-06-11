@@ -40,17 +40,6 @@ if (hungerLevel > 7) {
 } else {
     console.log('We can eat later!');
 }
-    
-// More Examples using operators
-
-  let mood = 'sleepy';
-  let tirednessLevel = 6;
-
-  if(mood === 'sleepy' && tirednessLevel > 8){
-    console.log('time to sleep');
-  }else{
-    console.log('not bed time yet');
-  }
 
 /*Logical Operators OR and AND
 OR - if one value is true, returns true.
@@ -61,6 +50,15 @@ OR - if one value is true, returns true.
 
 Falsy values include false, 0, empty strings, null undefined, and NaN. All other values are truthy.
 */
+
+  let mood = 'sleepy';
+  let tirednessLevel = 6;
+
+  if(mood === 'sleepy' && tirednessLevel > 8){
+    console.log('time to sleep');
+  }else{
+    console.log('not bed time yet');
+  }
 
   true || false;        // true
   10 > 5 || 10 > 20;    // true
@@ -73,8 +71,16 @@ Falsy values include false, 0, empty strings, null undefined, and NaN. All other
   true && false;     // false
   4 === 4 && 3 > 1;  // true
 
+/*
+ Truthy and Falsy Assignment 
+ */
 
-  /*
+let tool = '';
+let writingUtensil = tool || 'pen'; //prints the true one
+
+console.log(`The ${writingUtensil} is mightier than the sword.`);
+
+/*
 Ternary Operator
 In the example:
 
@@ -88,7 +94,12 @@ If the condition evaluates to false, the second expression executes.
   isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
   //Basicamente el ? funciona como el if, y el : como el else. El primer console.log no termina con semicolon
 
-//Switch Statement
+  let favoritePhrase = 'Love That!';
+  favoritePhrase === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
+
+/*
+* Switch Statement
+*/
 
 const food = 'salad';
  
