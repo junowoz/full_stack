@@ -1,4 +1,3 @@
-
 //IMPORTANDO REACT
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -27,4 +26,20 @@ const paragraphs = (
 
 //RENDERIZAR JSX
 ReactDOM.render(<h1>Hello world</h1>,
+    document.getElementById('app'));
+
+// Write code here:
+ReactDOM.render(<h1>Render me!</h1>,
+    document.getElementById('container'));
+
+//Another Example
+let myList = (
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+)
+
+ReactDOM.render(myList,
     document.getElementById('app'));
