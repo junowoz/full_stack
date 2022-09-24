@@ -43,5 +43,21 @@ VALUES (4, 'Taylor Swift', 26);
 
 SELECT * FROM celebs;
 
---Alter
--[=asdflksdfklasdf]
+--Alter: Adds a new column to a table.
+--ALTER TABLE is a clause that lets you make the specified changes.
+    --name: of the table.
+--ADD COLUMN is a clause that lets you add a new column to a table.
+    --name of the column
+    --TEXT is the data type for the new column
+
+ALTER TABLE celebs
+ADD COLUMN twitter_handle TEXT;
+
+SELECT * FROM celebs;
+
+--UPDATE: This statement edits a row in a table.
+--SET is a clause that indicates the column to edit.
+--WHERE is a clause that indicates which row(s) to update with the new column value.
+UPDATE celebs
+SET twitter_handle = '@taylorswift13' WHERE id = 4;
+SELECT * FROM celebs;
