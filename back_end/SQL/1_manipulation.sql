@@ -15,7 +15,7 @@ CREATE TABLE table_name (
 --Create Table: means create a new table, celebs: name of the table
 CREATE TABLE celebs(
     id INTEGER, --these are columns, parameters
-    namme TEXT,
+    name TEXT,
     age INTEGER
 );
 
@@ -52,7 +52,7 @@ SELECT * FROM celebs;
     --TEXT is the data type for the new column
 
 ALTER TABLE table_name
-ADD COLUMN column DATA_TYPE;
+ADD --COLUMN column DATA_TYPE;
 
 SELECT * FROM celebs;
 
@@ -113,7 +113,7 @@ SET name = 'Storm'
 WHERE id = 1;
 
 ALTER TABLE friends
-ADD COLUMN email TEXT;
+ADD --COLUMN email TEXT;
 
 UPDATE friends
 SET email = 'storm@codecademy.com'
