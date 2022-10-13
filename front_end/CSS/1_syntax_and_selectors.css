@@ -1,5 +1,10 @@
 /*
 SYNTAX AND SELECTORS
+
+1. href — like the anchor element.
+2. rel — this attribute describes the relationship between the HTML file and the CSS file. 
+Because you are linking to a stylesheet, the value should be set to stylesheet.
+
 In order to add the css file to the index.html,
 add this: <link href="style.css"rel="stylesheet">
 
