@@ -4,7 +4,7 @@
 - HTML
 - CSS
 - JavaScript
-- React
+- Vue.js
 
 ## Back-End
 - SQL

@@ -3,7 +3,11 @@ SELECT * FROM celebs;
 
 ------------------------------------------------------------------------------------
 
---Statements
+--Statements: 
+/*The code below is a SQL statement. A statement is text that the 
+database recognizes as a valid command. Statements always end in a semicolon ;
+*/
+
 CREATE TABLE table_name (
     column_1 data_type,
     column_2 data_type,
@@ -54,27 +58,31 @@ SELECT * FROM celebs;
 ALTER TABLE table_name
 ADD --COLUMN column DATA_TYPE;
 
-SELECT * FROM celebs;
+SELECT * FROM table_name;
 
 ------------------------------------------------------------------------------------
+NULL -- -> is a special value in SQL that represents missing or unknown data. 
 
+--------------------------------------------------------------------------------
 --UPDATE: This statement edits a row in a table.
 --SET is a clause that indicates the column to edit.
 --WHERE is a clause that indicates which row(s) to update with the new column value.
-UPDATE celebs
-SET twitter_handle = '@taylorswift13' WHERE id = 4;
-SELECT * FROM celebs;
+UPDATE table_name
+SET column1 = 'value'
+WHERE id = number_id;
 
+SELECT * FROM table_name;
 ------------------------------------------------------------------------------------
 
 --DELETE: Deletes rows from a table.
     --DELETE FROM name_of_table
     --WHERE name_row IS NULL;
     --IS NULL: returns true when the value is NULL
-DELETE FROM celebs
-WHERE twitter_handle IS NULL;
+DELETE FROM table_name
+WHERE column1 IS NULL;
 
-SELECT * FROM celebs;
+SELECT * FROM table_name;
+
 
 ------------------------------------------------------------------------------------
 
