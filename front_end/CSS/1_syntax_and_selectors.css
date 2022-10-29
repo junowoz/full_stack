@@ -130,3 +130,10 @@ and can be selected with the descendant combinator like so:
 .main-list li {
     color: aqua;
 }
+
+/*********Visualizar Bugs**********************************************************/
+
+.data-debug{
+    background-color: rgba(100, 100, 100, .2) !important;
+    outline: dashed 2px #444;
+}

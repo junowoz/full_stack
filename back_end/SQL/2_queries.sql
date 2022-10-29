@@ -1,4 +1,5 @@
 --SELECT: Every time you want to query data from a Database
+--Commas are used to separate column names.
 SELECT column1, column2 
 FROM table_name;
 
@@ -10,7 +11,7 @@ FROM table_name;
 
 --------------------------------------------------------------------
 --DISTINCT: Selects info from a DB, with no repetition of values. Only Unique values.
-
+  -- UNIQUE VALUES!!!
 SELECT DISTINCT column1 
 FROM table_name;
 
@@ -144,3 +145,36 @@ LIMIT 3;
 --------------------------------------------------------------------
 --Case
 
+-- A CASE statement allows us to create different outputs (usually in the SELECT statement). 
+-- It is SQL’s way of handling if-then logic.
+SELECT column1,
+ CASE
+  WHEN column1 > 8 THEN 'Messsage'
+  WHEN column1 > 6 THEN 'Messsage'
+  ELSE 'Messsage'
+ END AS 'Messsage'
+FROM movies;
+
+/*
+Each WHEN tests a condition and the following THEN gives us the string if the condition is true.
+The ELSE gives us the string if all the above conditions are false.
+The CASE statement must end with END.
+*/
+
+-------------------------------------------------------------------
+-- Project
+
+-------------------------------------------------------------------
+/*
+Let’s summarize:
+
+SELECT is the clause we use every time we want to query information from a database.
+AS renames a column or table.
+DISTINCT return unique values.
+WHERE is a popular command that lets you filter the results of the query based on conditions that you specify.
+LIKE and BETWEEN are special operators.
+AND and OR combines multiple conditions.
+ORDER BY sorts the result.
+LIMIT specifies the maximum number of rows that the query will return.
+CASE creates different outputs.
+*/
