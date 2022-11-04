@@ -105,8 +105,10 @@ console.log(typeof unknown3); // Output: boolean
   lostDollar--
 
 //Truly and Falsy Assignment
-
   let tool = 'marker';
+  
+//Escaping Literal Quotes in Strings
+  const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
 
 //////////////////////////////////////////////////////////////////////
 // Use short circuit evaluation to assign  writingUtensil variable below:
