@@ -10,21 +10,21 @@
     const myData = myArray[2][1];
 
 //Manipulate Arrays With push(): adds item at the end
-    const myArray = [["John", 23], ["cat", 2]];
+    const myArrayy = [["John", 23], ["cat", 2]];
     myArray.push(['dog', 3]);
 
 //Manipulate Arrays With unshift(): adds item at the beginning
-    const myArray = [["John", 23], ["dog", 3]];
+    const myArrayyy = [["John", 23], ["dog", 3]];
     myArray.shift();
     myArray.unshift(['Paul', 35]);
     
 //Manipulate Arrays With pop(): remove last item
-    const myArray = [["John", 23], ["cat", 2]];
-    const removedFromMyArray = myArray.pop();
+    const myArrayyyy = [["John", 23], ["cat", 2]];
+    const removedFromMyArrayy = myArray.pop();
 
 //Manipulate Arrays With shift(): remove first item
-    const myArray = [["John", 23], ["cat", 2]];
-    const removedFromMyArray = myArray.shift();
+    const myArryay = [["John", 23], ["cat", 2]];
+    const removedFromMyArrayyy = myArray.shift();
 
 //Shopping List
     const myList = [
@@ -128,20 +128,255 @@
     }
 
 //Use Conditional Logic with If Statements
-function trueOrFalse(wasThatTrue) {
-    if (wasThatTrue) {
-        return "Yes, that was true";
+    function trueOrFalse(wasThatTrue) {
+        if (wasThatTrue) {
+            return "Yes, that was true";
+        }
+            return "No, that was false";
     }
-        return "No, that was false";
-}
 
 //Comparison with the Equality Operator
 // == evaluates a comparison, if its true or false
     function testEqual(val) {
     if (val == 12) {
         return "Equal";
-    }
+        }
     return "Not Equal";
+        }
+    testEqual(10);
+
+// Comparison with the Strict Equality Operator
+    3 ===  3  // true
+    3 === '3' // false
+
+// Comparison with the Inequality Operator
+    1 !=  2    // true
+    1 != "1"   // false
+    1 != '1'   // false
+    1 != true  // false
+    0 != false // false
+
+// Comparison with the Strict Inequality Operator
+    3 !==  3  // false
+    3 !== '3' // true
+    4 !== 3  // true
+    
+//Comparison with the Greater and Less Than Operator
+    5   >  3  // true
+    7   > '3' // true
+    2   >  3  // false
+    '1' > 9  // false
+    
+    2   < 5 // true
+    '3' < 7 // true
+    5   < 5 // false
+    3   < 2 // false
+    '8' < 4 // false
+     
+//Comparison with the Greater/Less Than Or Equal To Operator
+    6   >=  6  // true
+    7   >= '3' // true
+    2   >=  3  // false
+    '7' >=  9  // false
+
+    4   <= 5 // true
+    '7' <= 7 // true
+    5   <= 5 // true
+    3   <= 2 // false
+    '8' <= 4 // false
+    
+/****************************************************************************/
+//Comparisons with the Logical AND Operator
+    function testLogicalAnd(val) {
+    if (val <= 50 && val >= 25 ) {
+        return "Yes";
+    }
+    return "No";
     }
 
-    testEqual(10);
+testLogicalAnd(10);
+    
+//Comparisons with the Logical OR Operator
+    function testLogicalOr(val) {
+    if (val < 10 || val > 20 ) {
+        return "Outside";
+    }
+    return "Inside";
+    }
+
+testLogicalOr(15);
+    
+// if - else - else if
+    if (val < 10 || val > 20 ) {
+        return "Outside";
+    }
+    return "Inside";
+
+//Logical Order in If Else Statements
+    function bar(x) {
+    if (x < 2) {
+        return "Less than two";
+    } else if (x < 1) {
+        return "Less than one";
+    } else {
+        return "Greater than or equal to two";
+    }
+}
+
+//Chaining If Else Statements
+function testSize(num) {
+    if (num < 5) {
+        return 'Tiny'
+    } else if (num < 10) {
+        return 'Small'
+    } else if (num < 15) {
+        return 'Medium'
+    } else if (num < 20) {
+        return 'Large'
+    } else { (num >= 20)
+        return 'Huge'
+    }
+
+    return "Change Me";
+}
+
+testSize(7);
+
+// Golf Code
+const names = [
+    "Hole-in-one!",
+    "Eagle",
+    "Birdie",
+    "Par",
+    "Bogey",
+    "Double Bogey",
+    "Go Home!"
+];
+
+function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0];
+    } else if (strokes <= par - 2) {
+        return names[1];
+    } else if (strokes == par - 1) {
+        return names[2];
+    } else if (strokes == par) {
+        return names[3];
+    } else if (strokes == par + 1) {
+        return names[4];
+    } else if ( strokes == par + 2) {
+        return names[5];
+    } else { (strokes >= par + 3)
+        return names[6];
+    }
+
+  return "Change Me";
+}
+golfScore(5, 4);
+
+// Selecting from Many Options with Switch Statements
+function caseInSwitch(val) {
+  let answer = "";
+
+    switch (val) {
+        case 1:
+            answer = "alpha"
+            break
+        case 2:
+            answer = "beta"
+            break
+        case 3:
+            answer = "gamma"
+            break
+        case 4:
+            answer = "delta"
+            break
+    }
+    
+  return answer;
+}
+
+caseInSwitch(1);
+
+//Adding a Default Option in Switch Statements
+function switchOfStuff(val) {
+    let answer = "";
+    
+    switch (val) {
+        case 'a':
+            answer = "apple"
+            break
+        case 'b':
+            answer = "bird"
+            break
+        case 'c':
+            answer = "cat"
+            break
+        default:
+            answer = "stuff"
+            break
+    }
+    
+  return answer;
+}
+
+switchOfStuff(1);
+
+//Multiple Identical Options in Switch Statements
+function sequentialSizes(val) {
+  let answer = "";
+
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+  return answer;
+}
+
+sequentialSizes(1);
+
+//Replacing If Else Chains with Switch
+function chainToSwitch(val) {
+  let answer = "";
+  // Only change code below this line
+
+  switch (val){
+    case "bob":
+      answer = "Marley";
+      break;
+    case 42:
+      answer = "The Answer";
+      break;
+    case 1:
+      answer = "There is no #1";
+      break;
+    case 99:
+      answer = "Missed me by this much!";
+      break;
+    case 7:
+      answer = "Ate Nine"
+  } 
+
+  return answer;
+}
+
+chainToSwitch(7);
+
+//Returning Boolean Values from Functions
+function isLess(a, b) {
+  return a < b;
+}
+isLess(10, 15);
