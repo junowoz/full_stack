@@ -118,7 +118,7 @@
     return arr.shift();
     }
     let testArr = [1, 2, 3, 4, 5];
-    console.log("Before: " + JSON.stringify(testArr));
+
     console.log(nextInLine(testArr, 6));
     console.log("After: " + JSON.stringify(testArr));
     
@@ -349,34 +349,106 @@ function sequentialSizes(val) {
 sequentialSizes(1);
 
 //Replacing If Else Chains with Switch
-function chainToSwitch(val) {
-  let answer = "";
-  // Only change code below this line
+    function chainToSwitch(val) {
+    let answer = "";
+    // Only change code below this line
 
-  switch (val){
-    case "bob":
-      answer = "Marley";
-      break;
-    case 42:
-      answer = "The Answer";
-      break;
-    case 1:
-      answer = "There is no #1";
-      break;
-    case 99:
-      answer = "Missed me by this much!";
-      break;
-    case 7:
-      answer = "Ate Nine"
-  } 
+    switch (val){
+        case "bob":
+        answer = "Marley";
+        break;
+        case 42:
+        answer = "The Answer";
+        break;
+        case 1:
+        answer = "There is no #1";
+        break;
+        case 99:
+        answer = "Missed me by this much!";
+        break;
+        case 7:
+        answer = "Ate Nine"
+    } 
 
-  return answer;
-}
+    return answer;
+    }
 
-chainToSwitch(7);
+    chainToSwitch(7);
 
 //Returning Boolean Values from Functions
-function isLess(a, b) {
-  return a < b;
+    function isLess(a, b) {
+    return a < b;
+    }
+    isLess(10, 15);
+
+//Return Early Pattern for Functions: When we get to a return, that's the end.
+    function abTest(a, b) {
+        if (a < 0 || b < 0) {
+            return undefined
+        }
+    
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+    }
+
+    abTest(2, 2);
+
+//Counting Cards
+let count = 0;
+
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count ++;
+            break;
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count --;
+            break;
+    }
+
+    if (count > 0) {
+        return count + ' Bet'
+    } else {
+        return count + ' Hold'
+    }
+  return "Change Me";
 }
-isLess(10, 15);
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+/**********************************************************************************/
+//Build JavaScript Objects: Arrays have Indexes, Objects have Properties
+const myDog = {
+  'name': 'Juno',
+  'legs': 4,
+  'tails': 5,
+  'friends': ['Face', 'Brandon', 'Pocho']
+
+};
+
+//Accessing Object Properties with Dot Notation
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt; 
+
+//Accessing Object Properties with Bracket Notation
+const testObjj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+const entreeValue = testObjj['an entree'];
+const drinkValue = testObjj['the drink'];
