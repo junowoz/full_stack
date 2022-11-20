@@ -452,3 +452,58 @@ const testObjj = {
 
 const entreeValue = testObjj['an entree'];
 const drinkValue = testObjj['the drink'];
+
+//Accessing Object Properties with Variables
+const testObjjj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+const playerNumber = 16;
+const player = testObjjj[playerNumber];
+
+console.log(testObj[playerNumber]); //This last line searches the object 16 and displays its value.
+
+// PLAYING WITH OBJECTS
+const myDDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDDog.name = 'Happy Coder'; //Updating Object Properties
+//or
+myDDog['name'] = 'Happy Coder'; //Updating Object Properties
+
+myDDog.bark = 'woof'; //Add New Properties to a JavaScript Object
+//or
+myDDog['bark'] = 'woof'; //Add New Properties to a JavaScript Object
+
+delete myDDog.tails; //Delete Properties from a JavaScript Object
+
+//Using Objects for Lookups
+function phoneticLookup(val) {
+    var result = '';
+    
+    const lookup = {
+        'alpha': "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+    }
+
+    result = lookup[val];
+    return result;
+}
+
+//Testing Objects for Properties: .hasOwnProperty(name of the property)
+function checkObj(obj, checkProp) {
+    const myObj = {
+        top: "hat",
+        bottom: "pants"
+    }
+}

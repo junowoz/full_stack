@@ -2,10 +2,11 @@
 
 let myAge = 21;
 
-let laterYears = myAge - 2;
 let earlyYears = 2;
+let laterYears = myAge - 2;
 
-earlyYears = earlyYears * 10.5;
+
+earlyYears *= 10.5;
 laterYears *= 4;
 
 let myAgeInDogYears = earlyYears + laterYears;
