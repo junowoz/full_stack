@@ -224,127 +224,127 @@ testLogicalOr(15);
 }
 
 //Chaining If Else Statements
-function testSize(num) {
-    if (num < 5) {
-        return 'Tiny'
-    } else if (num < 10) {
-        return 'Small'
-    } else if (num < 15) {
-        return 'Medium'
-    } else if (num < 20) {
-        return 'Large'
-    } else { (num >= 20)
-        return 'Huge'
-    }
+    function testSize(num) {
+        if (num < 5) {
+            return 'Tiny'
+        } else if (num < 10) {
+            return 'Small'
+        } else if (num < 15) {
+            return 'Medium'
+        } else if (num < 20) {
+            return 'Large'
+        } else { (num >= 20)
+            return 'Huge'
+        }
 
-    return "Change Me";
-}
+        return "Change Me";
+    }
 
 testSize(7);
 
 // Golf Code
-const names = [
-    "Hole-in-one!",
-    "Eagle",
-    "Birdie",
-    "Par",
-    "Bogey",
-    "Double Bogey",
-    "Go Home!"
-];
+    const names = [
+        "Hole-in-one!",
+        "Eagle",
+        "Birdie",
+        "Par",
+        "Bogey",
+        "Double Bogey",
+        "Go Home!"
+    ];
 
-function golfScore(par, strokes) {
-    if (strokes == 1) {
-        return names[0];
-    } else if (strokes <= par - 2) {
-        return names[1];
-    } else if (strokes == par - 1) {
-        return names[2];
-    } else if (strokes == par) {
-        return names[3];
-    } else if (strokes == par + 1) {
-        return names[4];
-    } else if ( strokes == par + 2) {
-        return names[5];
-    } else { (strokes >= par + 3)
-        return names[6];
+    function golfScore(par, strokes) {
+        if (strokes == 1) {
+            return names[0];
+        } else if (strokes <= par - 2) {
+            return names[1];
+        } else if (strokes == par - 1) {
+            return names[2];
+        } else if (strokes == par) {
+            return names[3];
+        } else if (strokes == par + 1) {
+            return names[4];
+        } else if ( strokes == par + 2) {
+            return names[5];
+        } else { (strokes >= par + 3)
+            return names[6];
+        }
+
+    return "Change Me";
     }
-
-  return "Change Me";
-}
 golfScore(5, 4);
 
 // Selecting from Many Options with Switch Statements
-function caseInSwitch(val) {
-  let answer = "";
+    function caseInSwitch(val) {
+    let answer = "";
+
+        switch (val) {
+            case 1:
+                answer = "alpha"
+                break
+            case 2:
+                answer = "beta"
+                break
+            case 3:
+                answer = "gamma"
+                break
+            case 4:
+                answer = "delta"
+                break
+        }
+        
+    return answer;
+    }
+
+    caseInSwitch(1);
+
+//Adding a Default Option in Switch Statements
+    function switchOfStuff(val) {
+        let answer = "";
+        
+        switch (val) {
+            case 'a':
+                answer = "apple"
+                break
+            case 'b':
+                answer = "bird"
+                break
+            case 'c':
+                answer = "cat"
+                break
+            default:
+                answer = "stuff"
+                break
+        }
+        
+    return answer;
+    }
+
+    switchOfStuff(1);
+
+//Multiple Identical Options in Switch Statements
+    function sequentialSizes(val) {
+    let answer = "";
 
     switch (val) {
         case 1:
-            answer = "alpha"
-            break
         case 2:
-            answer = "beta"
-            break
         case 3:
-            answer = "gamma"
-            break
+        answer = "Low";
+        break;
         case 4:
-            answer = "delta"
-            break
+        case 5:
+        case 6:
+        answer = "Mid";
+        break;
+        case 7:
+        case 8:
+        case 9:
+        answer = "High";
+        break;
     }
-    
-  return answer;
-}
-
-caseInSwitch(1);
-
-//Adding a Default Option in Switch Statements
-function switchOfStuff(val) {
-    let answer = "";
-    
-    switch (val) {
-        case 'a':
-            answer = "apple"
-            break
-        case 'b':
-            answer = "bird"
-            break
-        case 'c':
-            answer = "cat"
-            break
-        default:
-            answer = "stuff"
-            break
+    return answer;
     }
-    
-  return answer;
-}
-
-switchOfStuff(1);
-
-//Multiple Identical Options in Switch Statements
-function sequentialSizes(val) {
-  let answer = "";
-
-  switch (val) {
-    case 1:
-    case 2:
-    case 3:
-      answer = "Low";
-      break;
-    case 4:
-    case 5:
-    case 6:
-      answer = "Mid";
-      break;
-    case 7:
-    case 8:
-    case 9:
-      answer = "High";
-      break;
-  }
-  return answer;
-}
 
 sequentialSizes(1);
 
@@ -393,117 +393,267 @@ sequentialSizes(1);
     abTest(2, 2);
 
 //Counting Cards
-let count = 0;
+    let count = 0;
 
-function cc(card) {
-    switch (card) {
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-        case 6:
-            count ++;
-            break;
-        case 10:
-        case 'J':
-        case 'Q':
-        case 'K':
-        case 'A':
-            count --;
-            break;
+    function cc(card) {
+        switch (card) {
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                count ++;
+                break;
+            case 10:
+            case 'J':
+            case 'Q':
+            case 'K':
+            case 'A':
+                count --;
+                break;
+        }
+
+        if (count > 0) {
+            return count + ' Bet'
+        } else {
+            return count + ' Hold'
+        }
+    return "Change Me";
     }
 
-    if (count > 0) {
-        return count + ' Bet'
-    } else {
-        return count + ' Hold'
-    }
-  return "Change Me";
-}
-
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+    cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 /**********************************************************************************/
 //Build JavaScript Objects: Arrays have Indexes, Objects have Properties
-const myDog = {
-  'name': 'Juno',
-  'legs': 4,
-  'tails': 5,
-  'friends': ['Face', 'Brandon', 'Pocho']
+    const myDog = {
+    'name': 'Juno',
+    'legs': 4,
+    'tails': 5,
+    'friends': ['Face', 'Brandon', 'Pocho']
 
-};
+    };
 
-//Accessing Object Properties with Dot Notation
-const testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
-};
+    //Accessing Object Properties with Dot Notation
+    const testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+    };
 
-const hatValue = testObj.hat;
-const shirtValue = testObj.shirt; 
+    const hatValue = testObj.hat;
+    const shirtValue = testObj.shirt; 
 
 //Accessing Object Properties with Bracket Notation
-const testObjj = {
-  "an entree": "hamburger",
-  "my side": "veggies",
-  "the drink": "water"
-};
+    const testObjj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+    };
 
-const entreeValue = testObjj['an entree'];
-const drinkValue = testObjj['the drink'];
+    const entreeValue = testObjj['an entree'];
+    const drinkValue = testObjj['the drink'];
 
-//Accessing Object Properties with Variables
-const testObjjj = {
-  12: "Namath",
-  16: "Montana",
-  19: "Unitas"
-};
+    //Accessing Object Properties with Variables
+    const testObjjj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+    };
 
-const playerNumber = 16;
-const player = testObjjj[playerNumber];
+    const playerNumber = 16;
+    const player = testObjjj[playerNumber];
 
-console.log(testObj[playerNumber]); //This last line searches the object 16 and displays its value.
+    console.log(testObj[playerNumber]); //This last line searches the object 16 and displays its value.
 
 // PLAYING WITH OBJECTS
-const myDDog = {
-  "name": "Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
-};
+    const myDDog = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+    };
 
-myDDog.name = 'Happy Coder'; //Updating Object Properties
-//or
-myDDog['name'] = 'Happy Coder'; //Updating Object Properties
+    myDDog.name = 'Happy Coder'; //Updating Object Properties
+    //or
+    myDDog['name'] = 'Happy Coder'; //Updating Object Properties
 
-myDDog.bark = 'woof'; //Add New Properties to a JavaScript Object
-//or
-myDDog['bark'] = 'woof'; //Add New Properties to a JavaScript Object
+    myDDog.bark = 'woof'; //Add New Properties to a JavaScript Object
+    //or
+    myDDog['bark'] = 'woof'; //Add New Properties to a JavaScript Object
 
-delete myDDog.tails; //Delete Properties from a JavaScript Object
+    delete myDDog.tails; //Delete Properties from a JavaScript Object
 
 //Using Objects for Lookups
-function phoneticLookup(val) {
-    var result = '';
-    
-    const lookup = {
-        'alpha': "Adams",
-        "bravo": "Boston",
-        "charlie": "Chicago",
-        "delta": "Denver",
-        "echo": "Easy",
-        "foxtrot": "Frank"
-    }
+    function phoneticLookup(val) {
+        var result = '';
+        
+        const lookup = {
+            'alpha': "Adams",
+            "bravo": "Boston",
+            "charlie": "Chicago",
+            "delta": "Denver",
+            "echo": "Easy",
+            "foxtrot": "Frank"
+        }
 
-    result = lookup[val];
-    return result;
-}
+        result = lookup[val];
+        return result;
+    }
 
 //Testing Objects for Properties: .hasOwnProperty(name of the property)
-function checkObj(obj, checkProp) {
-    const myObj = {
-        top: "hat",
-        bottom: "pants"
+    function checkObj(obj, checkProp) {
+        if (obj.hasOwnProperty(checkProp)) {
+            return obj[checkProp]
+        } else {
+            return 'Not Found';
+        }
+        
     }
+
+//Manipulating Complex Objects
+    const myMusic = [
+        {
+            "artist": "Billy Joel",
+            "title": "Piano Man",
+            "release_year": 1973,
+                "formats": [
+                "CD",
+                "8T",
+                "LP"
+                ],
+            "gold": true
+        },
+        {
+            'artist': 'Garrix',
+            'title': 'Sentio',
+            'release_year': 2022,
+            'formats': [
+                'CD',
+                'MP3',
+                'LP'
+                ]
+        }
+    ];
+
+//Accessing Nested Objects
+    const myStorage = {
+    "car": {
+        "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+        },
+        "outside": {
+        "trunk": "jack"
+        }
+    }
+    };
+
+    const gloveBoxContents = myStorage.car.inside['glove box'];
+    //or 
+    const gloveBoxContentss = myStorage.car['outside'].trunk; 
+
+//Accessing Nested Arrays
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
+
+//Record Collection
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+function updateRecords(records, id, prop, value) {
+    if (prop !== 'tracks' && value !== '') {
+        records[id][prop] = value;
+    } else if (prop == 'tracks' && records[id].hasOwnProperty('tracks') == false) {
+        records[id][prop] = [value];
+    } else if (prop == 'tracks' && value !== '') {
+        records[id][prop].push(value);
+    } else if (value === '') {
+        delete records[id][prop];
+    }
+  return records;
 }
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+/********************************Iterate******************************************/
+//While
+const myArra = [];
+let i = 5
+
+while (i >= 0) {
+    myArra.push(i)
+    i--;
+}
+
+//For Loops
+// for (a; b; c), where a is the initialization statement, 
+// b is the condition statement, and c is the final expression.
+    const miArray = [];
+    for (let i = 1; i < 6; i++) {
+        miArray.push(i)
+    }
+
+ //Iterate Even and Odd Numbers With a For Loop
+const ourArray = [];
+
+for (let i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+for (let i = 1; i <=9; i+=2) {
+    ourArray.push(i)    
+}
+
+let text = ourArray.toString();
+console.log(text);
+
+//Count Backwards With a For Loop
+
+for (let i = 9; i > 0; i-=2) {
+    ourArray.push(i)    
+}
+
+//Iterate Through an Array with a For Loop
+const myArr = [2, 3, 4, 5, 6];
+
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+    total += myArr[i]; 
+}
+
+//Nesting For Loops
