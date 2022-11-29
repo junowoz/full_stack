@@ -657,3 +657,46 @@ for (let i = 0; i < myArr.length; i++) {
 }
 
 //Nesting For Loops
+function multiplyAll(arr) {
+  let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            product = product * arr[i][j];   
+        }        
+    }
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+//Iterate with JavaScript Do...While Loops
+//DO- WHILE LOOPS
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
+//This and this are basically the same
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+
+//So, in this exercise, do the following things:
+const mmyArray = [];
+let ii = 10;
+
+do {
+    mmyArray.push(i);
+    ii++;
+} while (ii === 10);
+
+//Replace Loops using Recursion
+function sum(arr, n) {
+  if(n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+}
+
+//Profile Lookup
