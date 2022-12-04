@@ -6,7 +6,7 @@ SELECT * FROM celebs;
 --Statements: 
 /*The code below is a SQL statement. A statement is text that the 
 database recognizes as a valid command. Statements always end in a semicolon ;
-*/
+*/ --
 
 CREATE TABLE table_name (
     column_1 data_type,
