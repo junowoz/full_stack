@@ -21,7 +21,8 @@ JOIN table2
   WHERE table2.table2column2 = 'Some condition';
 
 ----------------------------------------------------------------------------------
--- Inner Joins
+-- Inner Joins: Only the ones who are the same within the tables.
+-- This command joins 2 tables that are simmilar.
 
 ----------------------------------------------------------------------------------
 -- Left Joins
