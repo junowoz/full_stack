@@ -6,6 +6,8 @@ In this example, we have 3 tables: orders, subscriptions and customers.
 */
 ----------------------------------------------------------------------------------
 -- Combining Tables with SQL: JOIN
+-- When we perform a simple JOIN (often called an INNER JOIN),
+-- our result only includes rows that match our ON condition.
 
 SELECT *
 FROM table3
@@ -82,6 +84,10 @@ SELECT *
 FROM table1
 CROSS JOIN table2;
 
+/*
+Why is a CROSS JOIN not so useful?
+- It combines every row in one table with every row in another table.
+*/
 ----------------------------------------------------------------------------------
 -- Union: Stack one dataset on top of the other.
 /*
