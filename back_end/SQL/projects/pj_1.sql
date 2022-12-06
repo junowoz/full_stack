@@ -1,7 +1,7 @@
 -- Active: 1665775629680@@127.0.0.1@3306
 --PROJECT | CREATE A TABLE
-CREATE DATABASE Project1;
-USE Project1;
+CREATE DATABASE localhost;
+USE localhost;
 
 CREATE TABLE friends(
     id INTEGER,
