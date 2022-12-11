@@ -598,9 +598,9 @@ const recordCollection = {
 function updateRecords(records, id, prop, value) {
     if (prop !== 'tracks' && value !== '') {
         records[id][prop] = value;
-    } else if (prop == 'tracks' && records[id].hasOwnProperty('tracks') == false) {
+    } else if (prop === 'tracks' && records[id].hasOwnProperty('tracks') === false) {
         records[id][prop] = [value];
-    } else if (prop == 'tracks' && value !== '') {
+    } else if (prop === 'tracks' && value !== '') {
         records[id][prop].push(value);
     } else if (value === '') {
         delete records[id][prop];
@@ -675,7 +675,7 @@ do {
   ourArray.push(i);
   i++;
 } while (i < 5);
-//This and this are basically the same
+//This and these are basically the same
 while (i < 5) {
   ourArray.push(i);
   i++;
@@ -700,3 +700,40 @@ function sum(arr, n) {
 }
 
 //Profile Lookup
+// Setup
+const contacts = [
+    {
+        firstName: "Akira",
+        lastName: "Laine",
+        number: "0543236543",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "0994372684",
+        likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0487345643",
+        likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+        firstName: "Kristian",
+        lastName: "Vos",
+        number: "unknown",
+        likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+];
+
+function lookUpProfile(name, prop) {
+    if (name ){
+        return true
+    } else {
+        console.log('No such contact')
+    }
+}
+
+lookUpProfile("Akira", "likes");
