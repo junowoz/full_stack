@@ -177,10 +177,10 @@ module.exports.squareArea = function (sideLength) {
 }
 
 //ALTERNATIVE FORM
-const PI = Math.PI;
+const PiI = Math.PI;
 
 function circleArea(r) {
-  return PI * r * r;
+  return PiI * r * r;
 }
 function squareArea(side) {
   return side * side;
@@ -188,3 +188,22 @@ function squareArea(side) {
 
 module.exports.circleArea = circleArea;
 module.exports.squareArea = squareArea;
+
+/////////////////////////////////////////////////////////////////////////////////////
+//Code Challenge 2
+const radius = 5;
+const sideLength = 10;
+
+// Option 1: import the entire shape-area.js module here.
+
+const areaFunctions = require('./shape-area.js')
+
+// Option 2: import circleArea and squareArea with object destructuring
+
+const { circleArea, squareArea } = require("./shape-area.js")
+
+// use the imported .circleArea() and .squareArea() methods here
+
+const areaOfCircle = circleArea(radius);
+
+const areaOfSquare = squareArea(sideLength);
