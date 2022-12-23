@@ -22,4 +22,21 @@ let myEmitter = new events.EventEmitter();
  * 2nd Argument: data passed to the listener
  */
 
+//Example:
+// Here we require in the 'events' module and save a reference to it in an events variable
+let events = require("events");
+
+let listenerCallback = (data) => {
+  console.log("Celebrate " + data);
+};
+
+let theEmitter = new events.EventEmitter();
+
+theEmitter.on('celebration', listenerCallback);
+
+theEmitter.emit('celebration', 'Juan');
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * User Input/Output
+ */
