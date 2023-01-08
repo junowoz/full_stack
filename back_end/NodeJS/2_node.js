@@ -113,5 +113,3 @@ api.errorProneAsyncApi('problematic input', errorFirstCallback)
 //.alloc()
 const buffer = Buffer.alloc(5);
 console.log(buffer); // Ouput: [0, 0, 0, 0, 0]
-
-//p
