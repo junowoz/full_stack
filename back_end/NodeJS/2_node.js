@@ -1,23 +1,23 @@
 /**
  * The Events Module
- * 
+ *
  * Node has an event-driven architecture, meaning that we could trigger a certain piece of code
  * even if it's not in the habitual order.
  * In node we have the EventEmitter class, which we can call  by requiring in the events core module.
  */
 
 // Require in the 'events' core module
-let events = require('events');
- 
+let events = require("events");
+
 // Create an instance of the EventEmitter class
 let myEmitter = new events.EventEmitter();
 
 /**
- * Each event emitter instance has an .on() method which assigns a listener callback function to a named event. 
+ * Each event emitter instance has an .on() method which assigns a listener callback function to a named event.
  * 1st Argument: name of the event as a string.
  * 2nd Argument: The listener callback function.
- * 
- * This also also happens with the .emit() method,  which announces a named event has occurred. 
+ *
+ * This also also happens with the .emit() method,  which announces a named event has occurred.
  * 1st Argument: name of the event
  * 2nd Argument: data passed to the listener
  */
@@ -27,61 +27,63 @@ let myEmitter = new events.EventEmitter();
 let events = require("events");
 
 let listenerCallback = (data) => {
-  console.log("Celebrate " + data);
+    console.log("Celebrate " + data);
 };
 
 let theEmitter = new events.EventEmitter();
 
-theEmitter.on('celebration', listenerCallback);
+theEmitter.on("celebration", listenerCallback);
 
-theEmitter.emit('celebration', 'Juan');
+theEmitter.emit("celebration", "Juan");
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * User Input/Output
- * 
+ *
  * output = feedback that a computer provides: console.log()
  * input = data provided to the computer.
- * 
+ *
  * On the Node environment:
  * stdout.write() = standard output
  * stdin.on() = input from user on the process object
- * 
+ *
  * example:
  */
 
-let {testNumber} = require('./game.js');
+let { testNumber } = require("./game.js");
 
-process.stdout.write("I'm thinking of a number from 1 through 10. What do you think it is? \n(Write \"quit\" to give up.)\n\nIs the number ... ");
+process.stdout.write(
+    'I\'m thinking of a number from 1 through 10. What do you think it is? \n(Write "quit" to give up.)\n\nIs the number ... '
+);
 
 let playGame = (userInput) => {
-  let input = userInput.toString().trim();
-	testNumber(input);
+    let input = userInput.toString().trim();
+    testNumber(input);
 };
 
-process.stdin.on('data', playGame);
+process.stdin.on("data", playGame);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Error
- * 
+ *
  * Example:
  */
 
 //This is how most Node asynchronous APIs are set up to handle errors.
-const api = require('./api.js');
+const api = require("./api.js");
 
 // An error-first callback
 let errorFirstCallback = (err, data) => {
-  if (err) {
-    console.log(`Something went wrong. ${err}\n`);
-  } else {
-    console.log(`Something went right. Data: ${data}\n`);
-  }
+    if (err) {
+        console.log(`Something went wrong. ${err}\n`);
+    } else {
+        console.log(`Something went right. Data: ${data}\n`);
+    }
 };
 
 //This is an asynchronous method
-api.errorProneAsyncApi('problematic input', errorFirstCallback)
+api.errorProneAsyncApi("problematic input", errorFirstCallback);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
