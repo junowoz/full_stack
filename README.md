@@ -6,10 +6,14 @@
 - JavaScript
 - TypeScript
 - React.js
-- Vue.js
+- Next.js
 - Redux
 
 ## Back-End
-- SQL
 - Node.js
-- APIs
+- Nest.js
+- Express
+- MongoDB
+- PostgreDB
+- SQL
+- REST APIs
