@@ -14,6 +14,5 @@
 - Nest.js
 - Express
 - MongoDB
-- PostgreDB
-- SQL
+- MySQL
 - REST APIs
