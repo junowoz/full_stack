@@ -52,7 +52,7 @@ let myVar = getRandomNumber();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Explicit Return Types:
 
-import {getUserChoice,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12} from './resources'
+import {getUserChoice,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12} from './0_modules';
 function returnFruit():string{ //Here we specify the type of function. In this case, a string.
   let num = getUserChoice();
   switch(num){
