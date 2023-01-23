@@ -75,5 +75,37 @@ function returnFruit():string{ //Here we specify the type of function. In this c
 console.log(returnFruit())
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Void Return Type
+//Void Return Type: doesn't return anything.
 
+function logGreeting(name:string): void{
+  console.log(`Hello, ${name}!`)
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Documenting Functions: We can use @param to describe each of the function’s parameters. 
+// And we can use @returns to describe what the function returns.
+
+  /**
+   * Returns the sum of two numbers.
+   *
+   * @param x - The first input number
+   * @param y - The second input number
+   * @returns The sum of `x` and `y`
+   *
+   */
+  function getSum(x: number, y: number): number {
+    return x + y;
+  }
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * Review
+We learned all about how to use TypeScript to specify the types of function parameters and return types. Now we know how to:
+
+Give type annotations to function parameters.
+Deal with type annotations for optional parameters, which may have default values.
+Understand how TypeScript determines the return type of a function.
+Explicitly specify return types for functions, including for functions that don’t return anything.
+ */
