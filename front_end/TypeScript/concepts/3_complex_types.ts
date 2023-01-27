@@ -34,4 +34,15 @@ let arr: string[] = ["there", "there"];
 tup = ["there", "there"]; // No Errors.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Array Type Inference
+//Array Type Inference:  type inference returns arrays. When we want tuples, we need to use explicit type annotations.
+//Here we learn the .concat method. Which adds upp all the terms in a single []
+
+// Common way
+let dogTup: [string, string, string, string] = ['dog', 'brown fur', 'curly tail', 'sad eyes'];
+
+//A way to infer the type
+let myArr = dogTup.concat('hello');
+myArr[50] = 'not a dog'
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Rest Parameters
