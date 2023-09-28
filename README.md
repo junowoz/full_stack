@@ -2,16 +2,28 @@
 
 ## Front-End
 
-- JavaScript
-- TypeScript
-- React.js
+- React Native [Mobile]
 - Next.js
+  - React.js
+  - JavaScript
+  - TypeScript
+- Angular
 
 ## Back-End
 
 - Node.js
 - Nest.js
-- Express
+- Django
+  - Python
+- Spring
+  - Java
+- Go
+
 - MongoDB
-- MySQL
-- REST APIs
+- Postgres
+
+- AWS Lambda (Cloud)
+- Microservices
+- CI/CD
+- Unitary Test
+- Docker
